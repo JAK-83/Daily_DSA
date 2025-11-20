@@ -32,16 +32,28 @@
 
 class Solution {
   findFinalValue(List<int> nums, int original) {
-    for (int i = 0; i < nums.length; i++) {
-      if (nums[i] == original) {
+    
+   List <int> rvList= nums.reversed.toList();
+   
+    
+    ///forword
+     for (int j = 0; j < nums.length; j++) {
+      if(nums.contains(original)){
+            
         original = original * 2;
+      
       }
+     
     }
-    print(original);
+    
+      print(original);
+    
+    
   }
 }
 
 void main() {
   var obj = Solution();
-  obj.findFinalValue([2, 7, 9], 4);
+  obj.findFinalValue([8,19,4,2,15,3], 2);
+  
 }
